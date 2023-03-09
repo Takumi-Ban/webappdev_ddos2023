@@ -1,4 +1,4 @@
 *.sqlite
 *.db
 .python-version
-.venv/
+venv/
