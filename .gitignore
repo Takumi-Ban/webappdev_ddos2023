@@ -1,4 +1,9 @@
+# Database Files
 *.sqlite
 *.db
+
+# Python versions Files
 .python-version
+
+# Virtualenv Files
 venv/
