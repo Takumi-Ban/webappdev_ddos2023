@@ -14,15 +14,15 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="text-info">すごいアプリケーション</h1>
-                <h3>新規メモ</h3>
+                <h3>編集</h3>
                 <form method="post">
                     <div class="mb-3">
                         <label for="title" class="form-label">タイトル</label>
-                        <input type="text" class="form-control" id="title" name="title" maxlength="30" required>
+                        <input type="text" class="form-control" id="title" name="title" maxlength="30" value="{{ content.title }}" required>
                     </div>
                     <div class="mb-3">
                         <label for="content" class="form-label">内容</label>
-                        <textarea class="form-control" id="content" name="content" rows="3" maxlength="140" required></textarea>
+                        <textarea class="form-control" id="content" name="content" rows="3" maxlength="140" required>{{ content.detail }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">登録</button>
                     <a href="{{ url_for('index') }}" class="btn btn-info" role="button">メモを見る</a>

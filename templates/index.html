@@ -13,25 +13,16 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>すごいアプリケーション</h1>
-                <h3><a href="{{ url_for('create') }}">メモを追加</a></h3><br>
-                <h3>メモ一覧</h3>
-                <table class="table">
-                    <thead>
-                        <th>No.</th>
-                        <th>タイトル</th>
-                        <th>内容</th>
-                        <th>作成日時</th>
-                    </thead>
-                    {% for content in contents %}
-                    <tbody>
-                        <td>{{ content.id }}</td>
-                        <td>{{ content.title }}</td>
-                        <td>{{ content.content }}</td>
-                        <td>{{ content.created_at }}</td>
-                    </tbody>
-                    {% endfor %}
-                </table>
+                <h1 class="text-info">すごいアプリケーション</h1>
+                <a href="{{ url_for('create') }}" class="btn btn-info">メモを追加</a>
+                {% for content in contents %}
+                <h4>{{ content.id }}: {{ content.title }}</h4>
+                <p>作成日時: {{ content.created_at }}</p>
+                <a href={{ url_for('detail', id=content.id) }} class="btn btn-primary" role="button">メモ詳細</a>
+                <a href={{ url_for('delete', id=content.id) }} class="btn btn-danger" role="button" id="delete-btn">削除</a>
+                <a href={{ url_for('edit', id=content.id) }} class="btn btn-info" role="button">編集</a>
+                <hr>
+                {% endfor %}
             </div>
         </div>
     </div>

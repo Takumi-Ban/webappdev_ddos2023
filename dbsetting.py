@@ -11,7 +11,6 @@ Engine = create_engine(
 )
 Base = declarative_base()
 
-# create session
 session = scoped_session(
     sessionmaker(
         autocommit = False,
@@ -20,6 +19,5 @@ session = scoped_session(
     )
 )
 
-# use model
 Base = declarative_base()
 Base.query = session.query_property()

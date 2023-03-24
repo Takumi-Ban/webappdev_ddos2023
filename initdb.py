@@ -13,7 +13,7 @@ class Memo(Base):
 
     id = Column('id', Integer, primary_key=True, autoincrement=True, nullable=False)
     title = Column('title', String(30), nullable=False)
-    content = Column('content', String(140), nullable=False)
+    detail = Column('content', String(140), nullable=False)
     created_at = Column('created_at', DateTime, nullable=False)
 
 if __name__ == '__main__':

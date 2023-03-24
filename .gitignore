@@ -7,3 +7,6 @@
 
 # Virtualenv Files
 venv/
+
+# cache
+__pycache__/
