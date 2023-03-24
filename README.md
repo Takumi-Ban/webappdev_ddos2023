@@ -345,7 +345,7 @@ dbname = 'memo' # 接続するDB名
 DB = f'sqlite:///{dbname}.sqlite?charset=utf8mb4'
 ```
 - 参考: PostgreSQLを使用する場合
-    - 別途接続対象となるDBが作成し以下を記述
+    - 別途接続対象となるDBを作成し以下を記述
 ```python
 username = 'postgres' # 任意のusername
 password = 'postgres' # 対応するpassword
