@@ -59,9 +59,15 @@ $ code .
 ```
 
 ## ファイル構成
-- `app.py`
-- `db.py`
-- `initdb.py`
+- Python Files(すべて同一ディレクトリに保存)
+    - `app.py`: メイン処理を記述
+    - `dbsetting.py`: データベースの設定を記述
+    - `initdb.py`: データベースのテーブル定義を記述
+- HTML Files(すべて`./templates`以下に保存)
+    - `index.html`: トップページ
+    - `create.html`: メモを新規作成するページ
+    - `detail.html`: メモの詳細(内容)を表示するページ
+    - `edit.html`: メモを編集するページ
 
 ## 作成手順
 1. Webページの作成(HTML, Bootstrap)
